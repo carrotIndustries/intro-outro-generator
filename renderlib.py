@@ -10,7 +10,7 @@ import subprocess
 from svgtemplate import SVGTemplate
 from lxml import etree
 from urllib.request import urlopen
-from wand.image import Image
+#from wand.image import Image
 
 # Frames per second. Increasing this renders more frames, the avconf-statements would still need modifications
 fps = 25

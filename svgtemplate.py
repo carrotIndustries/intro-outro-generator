@@ -1,6 +1,6 @@
 # vim: tabstop=4 shiftwidth=4 expandtab
 import builtins
-import cssutils
+import css_parser as cssutils
 import logging
 import os
 import difflib

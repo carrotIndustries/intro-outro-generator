@@ -9,8 +9,8 @@ scheduleUrl = 'https://cfp.gulas.ch/gpn20/schedule/export/schedule.xml'
 def introFrames(args):
     for frame in range(0, fps):
         yield (
-            ('title', 'style', 'opacity', 0),
-            ('persons', 'style', 'opacity', 0),
+            ('$title', 'style', 'opacity', 0),
+            ('$persons', 'style', 'opacity', 0),
             ('gfactoryreset', 'style', 'opacity', 0),
             *((f'g{i}', 'style', 'opacity', int(i<=frame)) for i in range(0,26))
         )
@@ -21,8 +21,8 @@ def introFrames(args):
     frames = 1*fps
     for i in range(0, frames):
         yield(
-            ('title', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
-            ('persons', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
+            ('$title', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
+            ('$persons', 'style', 'opacity', easeInQuad(i, 0, 1, frames)),
             ('gfactoryreset', 'style', 'opacity', 1),
             *((f'g{i}', 'style', 'opacity', 1) for i in range(0,26))
         )
@@ -31,8 +31,8 @@ def introFrames(args):
     frames = 5*fps
     for i in range(0, frames):
         yield(
-            ('title', 'style', 'opacity', 1),
-            ('persons', 'style', 'opacity', 1),
+            ('$title', 'style', 'opacity', 1),
+            ('$persons', 'style', 'opacity', 1),
             ('gfactoryreset', 'style', 'opacity', 1),
             *((f'g{i}', 'style', 'opacity', 1) for i in range(0,26))
         )
@@ -40,8 +40,8 @@ def introFrames(args):
     frames = 1*fps
     for i in range(0, frames):
         yield(
-            ('title', 'style', 'opacity', easeOutQuad(i, 1, -1, frames)),
-            ('persons', 'style', 'opacity', easeOutQuad(i, 1, -1, frames)),
+            ('$title', 'style', 'opacity', easeOutQuad(i, 1, -1, frames)),
+            ('$persons', 'style', 'opacity', easeOutQuad(i, 1, -1, frames)),
             ('gfactoryreset', 'style', 'opacity', easeOutQuad(i, 1, -1, frames)),
             *((f'g{g}', 'style', 'opacity', easeOutQuad(i, 1, -1, frames)) for g in range(0,26))
         )
